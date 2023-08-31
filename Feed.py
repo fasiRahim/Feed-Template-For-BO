@@ -1,14 +1,30 @@
-class Feed:
+# If you're new to class in Python, we would recommend you to go through https://www.programiz.com/python-programming/class
+# Topics to cover: Attributes, Methods, Constructor, Setters, Getters, Objects
+
+class Feed: # We create a class called Feed, this is done using the keyword "class" followed by a name 
+
+    # __slots__ contains the list of attributes we want in our class
 
     __slots__ = [
                     'ChildId', 'ChildName', 'ChildAddress', 'ChildCity', 'ChildPostcode', 'ChildPerson',
                     'ParentId', 'ParentName', 'ParentAddress', 'ParentCity', 'ParentPostcode', 'ParentPerson',
                     'Internet', 'ChildBranch', 'ChildBirthDate', 'ParentBirthDate', 'Type', 'SourceNr', 'SourceDate',
                     'Origin', 'DirectPercentIndic', 'DirectPercent', 'TotalPercentIndic', 'TotalPercent', 'Voting',
-                    'Archive', 'DealNumber', 'StartDate', 'EndDate', 'ChildNameWebsite'
+                    'Archive', 'DealNumber', 'StartDate', 'EndDate'
                 ]
-    
-    def __init__(self, ChildId, ChildAddress, ParentName, Internet, SourceDate, DirectPercent, TotalPercent, ChildNameWebsite):
+
+    # A constructor is a special method in a class used to create and initialize an object of a class.
+    # A constructor is automatically invoked when an object of a class is created.
+    # In python, a constructor is created using the special method __init__()
+
+
+    def __init__(self, ChildId, ChildAddress, ParentName, Internet, SourceDate, DirectPercent, TotalPercent):
+
+        '''
+        In Python, the self parameter refers to the instance of a class, 
+        allowing access to its members and methods, as well as facilitating the initialization of new members. 
+        To learn more about self, refer to https://www.programiz.com/article/python-self-why 
+        '''
 
         if ChildId is not None:
             self.ChildId = ChildId
@@ -45,10 +61,6 @@ class Feed:
         else:
             self.TotalPercent = ''
         
-        if ChildNameWebsite is not None:
-            self.ChildNameWebsite = ChildNameWebsite
-        else:
-            self.ChildNameWebsite = ''
 
         self.ChildName = ''
         self.ChildCity = ''
@@ -62,12 +74,12 @@ class Feed:
         self.ChildBranch = ''
         self.ChildBirthDate = ''
         self.ParentBirthDate = ''
-        self.Type = '1'
-        self.SourceNr = '624'
-        self.Origin = 'F'
+        self.Type = '1' # Type will always be 1
+        self.SourceNr = '624' # This value is specific to BLBERZA proposal, if unsure leave it as blank
+        self.Origin = 'F' # Origin should be set to 'F'
         self.DirectPercentIndic = ''
         self.TotalPercentIndic = ''
-        self.Voting = '1'
+        self.Voting = '1' # Voting should always be 1
         self.Archive = ''
         self.DealNumber = ''
         self.StartDate = ''
