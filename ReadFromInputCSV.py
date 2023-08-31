@@ -9,7 +9,7 @@ def PopulateData():
 
     # We read the CSV file using the method read_csv() from Pandas. It is the most efficient way to do this.
     
-    dataFrame = pd.read_csv('./InputCSV.csv', encoding='utf-8') 
+    dataFrame = pd.read_csv('./AA.csv', encoding='utf-8') 
 
     for index, row in dataFrame.iterrows():
         # index is a throw away variable, it is generally recommended to use '_' for throw away variable names

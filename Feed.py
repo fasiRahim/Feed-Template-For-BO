@@ -89,11 +89,13 @@ class Feed: # We create a class called Feed, this is done using the keyword "cla
     def setSourceDateToRequiredFormat(self):
         # The website makes use of the format DD.MM.YYYY e.g. 24.8.2023
         # Add logic below to set the source date in the format YYYYMMDD
-        
-        #self.SourceDate = 'YYYYMMDD'
+
+        # You can use self.sourceDate to refer to the sourceDate
+        # E.g. self.SourceDate = '20210816'
         pass
 
     def setDirectPercentToRequiredFormat(self):
+
         # DirectPercent for example is available as 99,880926 in the website
         # We need to replace the ',' with '.' (decimal point) &
         # Accuracies limited to only 2 decimal places (before and after decimal)
@@ -101,5 +103,8 @@ class Feed: # We create a class called Feed, this is done using the keyword "cla
         # For e.g 99,880926 is parsed as 99.88 and 0.0823 is parsed as 0.08
         # No Round off is needed
         
-        #self.DirectPercent = '100.00'    
+        # You can use self.DirectPercent to refer to the DirectPercent
+        # E.g. self.DirectPercent = '20210816'
+
+        #self.DirectPercent = '99.98'    
         pass
